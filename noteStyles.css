@@ -1,0 +1,119 @@
+body {
+	background-image: url("../data/bgNotes.jpg");
+	background-size: cover;
+}
+
+#navList, #navListExit {
+    font-size: 115%;
+}
+
+#navListExit {
+    left: -20px;
+    font-size: 120%;
+}
+
+#createNoteBtn, #editNoteBtn {
+	position: relative;
+	margin-right: 40%;
+}
+
+#noteTitle, #noteEditTitle {
+	margin-bottom: 10px;
+}
+
+#noteDescription, #noteEditDescription {
+	resize:none;
+	height: 150px;
+}
+
+#formContent, #formEditContent {
+    background-color: #ADD8E6;
+    width: 400px;
+}
+
+#formTitle {
+	color: grey;
+}
+
+#noteError, #noteEditError {
+	margin: 2px;
+	color: #CD0000;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+#newNote {
+    float: left;
+    width: 280px;
+    height: 280px;
+    margin: 20px;
+    margin-left: 25px;
+    background-color: #EE9A00;
+}
+
+#deleteNewNote {
+	background-image: url(../data/cross.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+	position: relative;
+    width: 9%;
+    left: 245px;
+    top: -50px;
+    height: 25px;
+    cursor: pointer;
+}
+
+#newNoteTitle {
+	height: 50px;
+	word-wrap:break-word;
+	font-family: cursive;
+    font-size: 17px;
+    color: #4c05a3;
+    border-top-left-radius: 4px;
+    text-align: center;
+    width: 87%;
+    line-height: 17px;
+}
+
+#newNoteDescription {
+    resize:none;
+    border:none;
+    font-size: 17px;
+    position: relative;
+    top:-30px;
+    color: #4F4F4F;
+    padding: 5px 5px 15px 5px;
+    border-radius: 1px;
+    width: 100%;
+    height: 222px;
+}
+
+#AllNotes {
+	margin: 60px 20px 30px 20px;
+    height: auto;
+}
+
+/*Настройка navbar*/
+/* цвет фона и рамки навигационного меню */
+.navbar-default {
+    background-color: #FF8C00;
+    border-color: #FF8C00;
+}
+/* цвет текста, содержащий название сайта или бренда */
+.navbar-default .navbar-brand {
+    color: #ecf0f1;
+}
+/* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #CD661D;
+}
+/* Цвет пунктов навигационного меню */
+.navbar-default .navbar-nav > li > a {
+    color: #ecf0f1;
+}
+/* Цвет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #CD661D;
+}

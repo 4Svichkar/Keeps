@@ -1,0 +1,36 @@
+body {
+	background-image: url(../data/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+.container {
+    width: 22%;
+}
+
+#authLoginError, #authPassError, #regPassRepError {
+	margin: 2px;
+	color: red;
+	margin-bottom: 15px;
+	position: relative;
+	text-align: left;
+}
+
+#logo {
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 40px;
+	margin-top: 30px;
+}
+
+#auth, #registr {
+	text-align: center;
+	font-size: 230%;
+	font-family: cursive;
+	margin-bottom: 30px;
+}
+
+#logInBtn {
+	margin-bottom: 3px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Keeps</title>
+    <meta charset="utf-8">
+    <script src="scripts_registr.js"></script>
+    <link rel="icon" type="data/jpg" href="image/favicon.jpg">
+    <link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='css/userStyles.css' type='text/css' media='all'>
+</head>
+
+<body onload="CheckForAuthorization()">
+    <div>
+        <img src="data/notes.png" id="title">
+    </div>
+
+    <form  role="form" method="POST" class="form-signin">
+        <div class="container">
+            <div class="form-group">
+                <h2 class="form-signin-heading" id="loginWords">Log In</h2>
+                <label for="inputUserName" class="sr-only">Username</label>
+                <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username"  autofocus>
+                <p id = "loginError"></p>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" size="20" name="password" id="inputPassword" class="form-control" placeholder="Password">
+                <p id="passError"></p>
+            </div>
+            <input class="btn btn-lg btn-success btn-block" type="button" onclick="LogIn()" value="Sign In" id = "btnSignIn">
+            <input type="button" onclick="document.location.href='reg.html'" class="btn btn-sm btn-info btn-block" value="Sign Up">
+        </div>
+    </form>
+</body>
+
+</html>

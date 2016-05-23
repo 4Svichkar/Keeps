@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Notes</title>
+    <meta charset="utf-8">
+    <script src="scripts_note.js"></script>
+    <link rel="icon" type="data/jpg" href="data/favicon.jpg">
+    <link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all'>
+    <link rel="stylesheet" type="text/css" href="css/noteStyles.css" media="all">
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="ShowNotes()">
+  <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+      <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="navbar-brand">Keeps</a>
+    </div>
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li data-toggle = "modal" data-target = "#form" id="navList"><a href="#">Add New Note</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li id="navListExit" onclick="Logout()"><a href="#">Exit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+	<div class="modal fade" id="form" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content" id = "formContent">
+        <div class="modal-header">
+          <button class="close" data-dismiss = "modal">X</button>
+          <h2 class="modal-title text-center" id="formTitle">New note</h2>
+        </div>
+        <div class="modal-body">
+        	<input type="text" id="noteTitle" class="form-control input-lg" maxlength="20" placeholder = "Title of the note">
+        	<textarea class="form-control input-lg" id="noteDescription" maxlength = "1000" placeholder = "Description of the note"></textarea>
+        	<p id = "noteError"></p>
+        </div>
+      	<div class="modal-footer">
+      		<button class="btn btn-success btn-lg" id="createNoteBtn" onclick="AddNote()">Add</button>
+      	</div>
+      </div>
+    </div>
+  </div>
+
+	<div class="modal fade" id="formEdit" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm">
+    	<div class="modal-content" id = "formEditContent">
+      	<div class="modal-header">
+      		<button class="close" data-dismiss = "modal">X</button>
+      		<h2 class="modal-title text-center" id="formTitle">Edit note</h2>
+      	</div>
+      	<div class="modal-body">
+    			<input type="text" id="noteEditTitle" class="form-control input-lg" maxlength="20" placeholder = "Title of the note">
+      		<textarea class="form-control input-lg" id="noteEditDescription" maxlength = "1000" placeholder = "Description of the note"></textarea>
+    			<p id = "noteEditError"></p>
+    		</div>
+      	<div class="modal-footer">
+       			<button class="btn btn-success btn-lg" id="editNoteBtn" onclick="EditNote()">Edit</button>
+    		</div>
+      </div>
+   	</div>
+  </div>
+
+  <div id="AllNotes"></div>
+</body>
+
+</html>

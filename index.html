@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Keeps</title>
+    <meta charset="utf-8">
+    <script src="scripts_registr.js"></script>
+    <link rel="icon" type="data/jpg" href="data/favicon.jpg">
+    <link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='css/userStyles.css' type='text/css' media='all'>
+</head>
+
+<body onload="IsAuthorized()">
+    <div>
+        <img src="data/logo.png" id="logo">
+    </div>
+
+    <form  role="form" method="POST" class="form-signin">
+        <div class="container">
+            <div class="form-group">
+                <h2 class="form-signin-heading" id="auth">Authorization</h2>
+                <input type="text" id="authUsername" class="form-control" placeholder="Username"  autofocus>
+                <p id = "authLoginError"></p>
+            </div>
+            <div class="form-group">
+                <input type="password" size="20" id="authPassword" class="form-control" placeholder="Password">
+                <p id="authPassError"></p>
+            </div>
+            <input class="btn btn-lg btn-success btn-block" type="button" onclick="LogIn()" value="Log In" id = "logInBtn">
+            <input type="button" onclick="document.location.href='RegistrationPage.html'" class="btn btn-md btn-danger btn-block" value="Create Account">
+        </div>
+    </form>
+</body>
+
+</html>

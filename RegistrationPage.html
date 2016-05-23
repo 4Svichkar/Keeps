@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration</title>
+    <script src="scripts_registr.js"></script>
+    <link rel="icon" type="data/jpg" href="data/favicon.jpg">
+    <link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='css/userStyles.css' type='text/css' media='all'>
+</head>
+
+<body onload="IsAuthorized()">
+    <div>
+        <img src="data/logo.png" id="logo">
+    </div>
+
+    <form  role="form" method="POST" class="form-signin">
+        <div class="container">
+            <div class="form-group">
+                <h2 class="form-signin-heading" id="registr">Registration</h2>
+                <input type="text" name="username" id="authUsername" class="form-control" placeholder="Username" required autofocus>
+                <p id = "authLoginError"></p>
+            </div>
+            <div id="pas_status" class="form-group">
+                <input type="password" size="20" id="authPassword" class="form-control" placeholder="Password" required>
+                <p id="authPassError"></p>
+            </div>
+            <div id="re_pas_status" class="form-group">
+                <input type="password" size="20" id="regRepPassword" class="form-control" placeholder="Repeat password" required>
+                <p id="regPassRepError"></p>
+            </div>
+            <input class="btn btn-lg btn-success btn-block" type="button" name="submit" onclick="SignUp()" value="Sign Up" id="signUpBtn">
+            <input type="button" onclick="document.location.href='index.html'" class="btn btn-md btn-danger btn-block" value="Log In">
+        </div>
+    </form>
+</body>
+
+</html>
